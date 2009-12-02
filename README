@@ -1,0 +1,35 @@
+Module for supporting ANSI Control sequences in Perl 6
+
+This module is intended to be a port of the Perl 5 module
+Term::ANSIColor.
+
+It is just created, so it's not even an embryo of a Perl 6 module yet.
+Another way to view it is that the module right now is 100% full of
+fail, which is the optimal start for an OSS project.  Things simply
+can only get better from now on.
+
+The first steps will be to create the color() and colored() functions
+already present in the Perl 5 module.  When doing so, I will include
+support not only for ANSI colors 0 through 7 but also for 8 through
+15 as well.  This for two reasons: It will vastly increase the
+usability of the module and it will basically be a no-brainer
+to implement colors 8 - 15 when I'm already working with 0 - 7.
+
+Constants functions will show up later, when someone (possibly me)
+who knows how to use AUTOLOAD in Perl 6 tries to implement them.
+
+CREDITS
+    Jakob Ilves <illvilja@gmail.com>
+
+    A lot of inspiration will naturally come from Russ Allbery's
+    Perl 5 Term::ANSIColor.
+
+    Inspiration of how to setup a Perl 6 module in general comes
+    from Moritz Lenz' json module.
+
+    Thanks to Jonathan Leto on advice on how to get started with
+    git and github.com
+
+    Thanks to Carl Mäsak and the other folks on #perl6 on freenode
+    for just being very encouraging
+
