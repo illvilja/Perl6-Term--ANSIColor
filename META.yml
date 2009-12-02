@@ -1,0 +1,19 @@
+---
+name: Term-ANSIColor
+version: '0.0.0'
+author:
+    - 'Jakob Ilves <illvilja@gmail.com>'
+abstract: 'Support for printing ANSI Control sequences'
+license: artistic_2
+resources:
+    license: http://www.perlfoundation.org/artistic_2_0_notes
+distribution_type: module
+requires:
+    perl: 6.0
+provides:
+generated_by: 'Jakob Ilves'
+meta-spec:
+    url: http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+ 
+ 
