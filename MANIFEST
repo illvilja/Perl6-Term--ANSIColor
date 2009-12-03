@@ -1,4 +1,9 @@
+Configure.pl
+deps.proto
+lib/Configure.pm
 lib/Term/ANSIColor.pm
+Makefile.in
 META.yml
 README
+t/01-simple.t
 t/runtest.p6
