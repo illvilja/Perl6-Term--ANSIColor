@@ -3,25 +3,43 @@ Module for supporting ANSI Control sequences in Perl 6
 This module is intended to be a port of the Perl 5 module
 Term::ANSIColor.
 
-It is just created, so it's not even an embryo of a Perl 6 module yet.
-Another way to view it is that the module right now is 100% full of
-fail, which is the optimal start for an OSS project.  Things simply
-can only get better from now on.
+There is now support for the 'color()' function found in the Perl 5 module,
+so you can now use print() and say() in Perl 6 to emit nicely colored
+text!  Also, I included support for resetting the colors back to default. 
 
-The first steps will be to create the color() and colored() functions
-already present in the Perl 5 module.  When doing so, I will include
-support not only for ANSI colors 0 through 7 but also for 8 through
-15 as well.  This for two reasons: It will vastly increase the
-usability of the module and it will basically be a no-brainer
-to implement colors 8 - 15 when I'm already working with 0 - 7.
+The colored() function (check Term::ANSIColor for Perl 5 for a description)
+is on the TODO.
 
 Constants functions will show up later, when someone (possibly me)
 who knows how to use AUTOLOAD in Perl 6 tries to implement them.
 
+Contributors who are more competent and/or impatient than me are welcome
+to assist in improving/changing the code, and adding features listed in the
+above TODO (or other features they find useful).  Just let me know you are
+intrested in contributing.
+
+Bug reports, praise, blame and thoughts are also welcome.
+
+STATE:
+
+    The ANSI control codes for a foreground color of ANSI colors 0 through 15
+    as well as background colors for the same is now suppored.
+    
+    Colors 0 through 7 are darker variants of black, red, green, yellow, blue,
+    magenta, cyan and white.  Colors 8 through 15 are the brighter, more
+    vivid versions of the corresponding dark color.  Different terminal
+    emulator software have different caveats: bright black is dark grey
+    for some emulators, pitch black for others.  Non-bright yellow is usually
+    dark yellow but it has been reported to displayed as brown or as bright
+    orange for certain terminal emulators.
+    
+    The 'reset' attribute is also supported, which is useful to tell the
+    terminal to revert to default foreground and background color.
+
 CREDITS
     Jakob Ilves <illvilja@gmail.com>
 
-    A lot of inspiration will naturally come from Russ Allbery's
+    A lot of inspiration naturally comes from Russ Allbery's
     Perl 5 Term::ANSIColor.
 
     Inspiration of how to setup a Perl 6 module in general comes
@@ -32,4 +50,5 @@ CREDITS
 
     Thanks to Carl Mäsak and the other folks on #perl6 on freenode
     for just being very encouraging
+
 

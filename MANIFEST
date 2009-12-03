@@ -1,2 +1,4 @@
+lib/Term/ANSIColor.pm
 META.yml
 README
+t/runtest.p6
